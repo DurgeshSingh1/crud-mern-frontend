@@ -23,7 +23,7 @@ const Edit = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/getone/${id}`) // http://localhost:8000/api/getone/${id} https://crud-mern-ux9a.onrender.com
+      .get(`https://crud-mern-hfgb.onrender.com/api/getone/${id}`) // http://localhost:8000/api/getone/${id} https://crud-mern-ux9a.onrender.com
       .then((response) => {
         setUser(response.data);
       })
@@ -35,7 +35,7 @@ const Edit = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     await axios
-      .put(`http://localhost:8000/api/update/${id}`, user) // http://localhost:8000/api/update/${id} https://crud-mern-ux9a.onrender.com
+      .put(`https://crud-mern-hfgb.onrender.com/api/update/${id}`, user) // http://localhost:8000/api/update/${id} https://crud-mern-ux9a.onrender.com
       .then((response) => {
         toast.success(response.data.msg, { position: "top-right" });
         navigate("/");
